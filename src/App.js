@@ -1,6 +1,6 @@
-
 import './index.css';
 import data from './data';
+import Project from './components/Project';
 
 function App() {
   return (
@@ -49,29 +49,8 @@ function App() {
 
         <section className="cards-wrapper">
           {
-            data.products.map(product => (
-              <div key={product._id} className="card-grid-space">
-              <a className="card" href={`/product/${product._id}`}>
-              <div>
-                <h2>{product.name}</h2>
-                <p>
-                  {product.description}
-                </p>
-                <div className="dets">
-                  <div className="date">{product.date}</div>
-                  <div className="tags">
-                    <div className="tag">{product.category}</div>
-                  </div>
-                </div>
-                <div className="dets">
-                  <div className="trend">{product.progress}% funded</div>
-                  <div className="tags">
-                    <div className="amount">{product.contribution} contributions</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+            data.projects.map((project) => (
+              <Project key={project._id} project= {project}></Project>
             ))
           }
           {/* <div className="card-grid-space">

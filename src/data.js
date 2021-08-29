@@ -1,5 +1,5 @@
 const data ={
-    products: [
+    projects: [
         {
             _id: '1',
             name: 'Relief Plates and Drink  |  Spread The Love From Your Table',
