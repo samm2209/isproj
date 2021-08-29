@@ -1,18 +1,19 @@
 
 import './index.css';
+import data from './data';
 
 function App() {
   return (
     <div className="App">
       <div className="topnav">
-        <a href="#start">Start a project</a>
-        <a href="#support">Support a project</a>
-        <a href="#discover">Discover</a>
+        <a href="/start">Start a project</a>
+        <a href="/support">Support a project</a>
+        <a href="/discover">Discover</a>
 
-        <a className="logo" href="#home">JIFUND</a>
+        <a className="logo" href="/">JIFUND</a>
 
-        <a className="signin" href="#signin">Sign in</a>
-        <a href="#signup">Create account</a>
+        <a className="signin" href="/signin">Sign in</a>
+        <a href="signup">Create account</a>
       </div>
 
       <div className="submenu">
@@ -20,9 +21,9 @@ function App() {
           <input type="checkbox" />
           <span className="slider round"></span>
         </label>
-        <a>Categories</a>
-        <a>How it Works</a>
-        <a>About</a>
+        <a href="/categories">Categories</a>
+        <a href="/how">How it Works</a>
+        <a href="/about">About</a>
       </div>
 
       <div>
@@ -47,7 +48,33 @@ function App() {
         </div>
 
         <section className="cards-wrapper">
-          <div className="card-grid-space">
+          {
+            data.products.map(product => (
+              <div key={product._id} className="card-grid-space">
+              <a className="card" href={`/product/${product._id}`}>
+              <div>
+                <h2>{product.name}</h2>
+                <p>
+                  {product.description}
+                </p>
+                <div className="dets">
+                  <div className="date">{product.date}</div>
+                  <div className="tags">
+                    <div className="tag">{product.category}</div>
+                  </div>
+                </div>
+                <div className="dets">
+                  <div className="trend">{product.progress}% funded</div>
+                  <div className="tags">
+                    <div className="amount">{product.contribution} contributions</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+            ))
+          }
+          {/* <div className="card-grid-space">
             <a className="card one" href="">
               <div>
                 <h2>Relief Plates and Drink  |  Spread The Love From Your Table</h2>
@@ -115,7 +142,7 @@ function App() {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
         </section>
 
         <form action="">
