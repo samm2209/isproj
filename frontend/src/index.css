@@ -18,6 +18,15 @@ body {
   height: 100;
 }
 
+a {
+  text-decoration: none;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
 .topnav {
   background-color: black;
   overflow: hidden;
@@ -76,9 +85,9 @@ body {
 }
 
 .submenu a:hover {
-  border-bottom: 2px solid #04aa3b;
-  -webkit-transition: .4s;
-  transition: .4s;
+  border-bottom: 1.5px solid #04aa3b;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 .switch {
@@ -152,7 +161,7 @@ input:checked + .slider:before {
   max-width: 400px;
   display:flex;
   flex-direction:column;
-  margin-left: 50px;
+  margin-left: 20px;
   padding:50px;
   justify-content: center;
   text-align: center;
@@ -232,7 +241,7 @@ input:checked + .slider:before {
   background-image: url("https://images.yourstory.com/cs/1/b3cc3444ab5e11e88691f70342131e20/Whatissoftwareandtypesofsoftwarewithexamples1575272423828jpg");
 }
 
-.dets {
+.dets, .info span {
   display: flex;
   justify-content: space-between;
   /* margin-top:35px; */
@@ -272,14 +281,14 @@ input:checked + .slider:before {
   color: white;
 }
 
-.content {
+.content{
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px 50px;
 }
 
-.content h1 {
+.content h1, .name h1 {
   color: #818181;
   font-size: 24px;
 }
@@ -287,7 +296,6 @@ input:checked + .slider:before {
 form {
   margin-top: 50px;
   border-top: 4px solid #020202;
-  
 }
 
 .container {
@@ -327,6 +335,7 @@ input[type=submit] {
   color: #ffffff;
   border: none;
   margin-top: 30px;
+  margin-bottom: 60px;
   width: 150px;
   letter-spacing: 1px;
 }
@@ -335,12 +344,130 @@ input[type=submit]:hover {
   opacity: 0.8;
 }
 
+img {
+  border-radius: 0.5rem;
+}
+
+img.small{
+  max-width: 5rem;
+  width:100%;
+}
+
+img.medium {
+  max-height: 24rem;
+  min-height: 24rem;
+  max-width: 29rem;
+  width: 100%;
+}
+
+img.large {
+  max-width: 60rem;
+  min-width: 60rem;
+  max-height: 30rem;
+  min-height: 20rem;
+  height: 100%;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  margin: 20px 50px;
+  justify-content: center;
+
+}
+
+.name h1{
+  margin-left: 180px;
+}
+
+.sidebar {
+  padding: 20px;
+  justify-content: flex-start;
+  margin-bottom: 150px;
+  width:350px;
+  box-shadow: 0px 3px 20px 10px #d1d1d1;
+}
+
+.left {
+  margin-right: 20px;
+  
+}
+
+.primary.proj {
+  width:100%;
+}
+
+.mation {
+  display: flex;
+  justify-content:center;
+}
+
+.info {
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info a {
+  margin: 0;
+  color: #000000;
+  font-size: 12px;
+}
+
+.report{
+  border-bottom: 3px solid #04aa3b;
+}
+
+.report h2 {
+  margin:0 0 0 10px;
+}
+
+.report span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.who {
+  border-bottom: 1px solid #818181;  
+}
+
+.who p {
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.story {
+  width: 500px;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+}
+
+.story p {
+  width: 500px;
+  margin: 0 0;
+  text-align: left;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
 footer {
   background-color: #000000;
   color: #f8f8f8;
   font-size: 14px;
   font-weight: 100;
-  padding: 50px;
+  padding: 20px;
   text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 
