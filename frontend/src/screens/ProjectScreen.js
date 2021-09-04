@@ -48,7 +48,7 @@ export default function ProjectScreen(props) {
                 </div>
             </div>
             <div>
-                <button className="primary proj">Share</button>
+                <button className="coprimary proj">Share</button>
                 <button className="primary proj">Support campaign</button>
             </div>
             
