@@ -475,6 +475,33 @@ img.large {
   font-weight: 400;
 }
 
+.alert {
+  padding: 10px;
+  border:0.1rem solid transparent;
+  border: 0.5rem;
+}
+
+.alert-info {
+  color:#04aa3b;
+  background-color: #f3f3f3;
+}
+
+.alert-danger {
+  color: #c00000;
+  background-color: #f3f3f3;
+  padding-left: 40%;
+}
+
+.fas {
+  color: #797878;
+  font-size:50px;
+  position: absolute;
+  padding-top: 6px;
+  padding-left: 6px;
+  left: 50%;
+  top: 50%;
+}
+
 
 footer {
   background-color: #000000;
@@ -488,4 +515,3 @@ footer {
   right: 0;
   position: absolute;
 }
-
