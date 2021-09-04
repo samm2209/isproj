@@ -6,7 +6,7 @@ const data ={
             category: 'Donation',
             organiser: 'We Aid Co.',
             image: '/assets/img1.jpg',
-            goal: '100k',
+            goal: '150k',
             raised: '90,000',
             description:'Put a smile on someones face today. A charitable act of giving the surplus you have to the Hamsi could go a long way.', 
             date: '1 Aug 2021',
