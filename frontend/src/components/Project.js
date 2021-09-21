@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Project(props) {
     const { project } = props;
     return (
         <div key={project._id} className="card-grid-space">
-                <a className="card" href={`/project/${project._id}`}>
+                <Link className="card" to={`/project/${project._id}`}>
                   <div>
                     <h2>{project.name}</h2>
                     <p>
@@ -23,7 +24,7 @@ export default function Project(props) {
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
         </div>
     );
 }

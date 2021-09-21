@@ -13,6 +13,7 @@ export default function HomeScreen() {
   useEffect(() => {
       dispatch(listProjects());
   }, [dispatch]);
+  
   return (
     <div>
       {loading ? <LoadingBox></LoadingBox>

@@ -16,6 +16,10 @@ export default function ProjectScreen(props) {
     dispatch(detailsProject(projectId))
   }, [dispatch, projectId])
 
+  const supportProjectHandler = () =>{
+    props.history.push(`/cart/${projectId}`);
+  };
+
   return (
     <div>
       {loading ? <LoadingBox></LoadingBox>
@@ -24,7 +28,7 @@ export default function ProjectScreen(props) {
           :
           <>
             <div>
-              <Link to="/">Back to home</Link>
+              <Link className="back" to="/">Back to home</Link>
               <div className="name">
                 <h1>{project.name}</h1>
               </div>
@@ -51,21 +55,21 @@ export default function ProjectScreen(props) {
                   </div>
                   <div className="mation">
                     <div className="info">
-                      <p><a href="">{project.contribution}</a></p>
+                      <p><Link to="">{project.contribution}</Link></p>
                       <span>donors</span>
                     </div>
                     <div className="info">
-                      <p><a href="">{project.shares}</a></p>
+                      <p><Link to="">{project.shares}</Link></p>
                       <span>shares</span>
                     </div>
                     <div className="info">
-                      <p><a href="">{project.followers}</a></p>
+                      <p><Link to="">{project.followers}</Link></p>
                       <span>followers</span>
                     </div>
                   </div>
                   <div>
                     <button className="coprimary proj">Share</button>
-                    <button className="primary proj">Support campaign</button>
+                    <button onClick={supportProjectHandler} className="primary proj">Support campaign</button>
                   </div>
 
                 </div>
