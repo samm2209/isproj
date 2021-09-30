@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFromCart, supportProject } from '../actions/cartActions';
@@ -9,6 +9,7 @@ export default function CartScreen(props) {
     const dispatch = useDispatch();
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
+    const [bids, setBids] = useState('')
 
     useEffect(() => {
         if (projectId) {
@@ -59,8 +60,8 @@ export default function CartScreen(props) {
                                                 <h4>Pledge amount</h4>
                                                 <input type="number" placeholder="amount" id="quantity" min="100" max="100000"
                                                     onChange={e => {
-                                                        this.setState({ bid: e.target.value });
-                                                        console.log(this.state);
+                                                        setBids(e.target.value);
+                                                        console.log(bids);
                                                     }}>
                                                 </input>
                                             </div>

@@ -340,7 +340,7 @@ input:checked + .slider:before {
   font-size: 24px;
 }
 
-form {
+form.subscribe {
   margin-top: 50px;
   border-top: 4px solid #020202;
 }
@@ -353,9 +353,13 @@ form {
   padding: 20px;
 }
 
-.sub-text h2 {
+.sub-text h2, .form h1  {
   color: #797878;
   font-size: 24px;
+}
+
+.form h1 {
+  text-align: center;
 }
 
 .sub-text p,
@@ -368,6 +372,15 @@ input[type=text], input[type=submit] {
   padding: 12px;
   margin: 8px;
   display: inline-block;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+
+input[type=email], input[type=password], input[type=text] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px;
   border: 1px solid #cccccc;
   box-sizing: border-box;
   background-color: #f3f3f3;
@@ -628,6 +641,63 @@ button.check {
   letter-spacing: 0.1rem;
   border-radius: 2px;
   cursor: pointer;
+}
+
+button.check.cart{
+  width: 100%;
+}
+
+.form{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.form > div{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form label{
+  margin: 10px 0;
+  display: block;
+}
+
+.form_base {
+  padding: 10px;
+  text-align: center;
+}
+
+.form_base {
+  font-size: 14px;
+}
+
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 10rem;
+  padding: 10px;
+  z-index: 100;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.loading {
+  display:block !important;
 }
 
 footer {

@@ -49,7 +49,7 @@ export default function HomeScreen() {
               }
             </section>
 
-            <form action="">
+            <form className="subscribe" action="">
               <div className="container">
                 <div className="sub-text">
                   <h2 className="">Get the latest updates</h2>

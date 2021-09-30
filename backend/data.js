@@ -1,7 +1,28 @@
+import bcrypt from 'bcryptjs';
 const data ={
+    users: [
+        {
+            name:'Motaroki',
+            email:'peggywatch@hotmail.com',
+            password: bcrypt.hashSync('Fuxsoxy59', 8),
+            isAdmin: true,
+        },
+        {
+            name:'wellick',
+            email:'tyrellw@ecorp.com',
+            password: bcrypt.hashSync('l3monp3pp3r', 8),
+            isAdmin: false,
+        },
+        {
+            name:'bruce',
+            email:'norton@mail.com',
+            password: bcrypt.hashSync('surfpack1', 8),
+            isAdmin: false,
+        },
+    ],
     projects: [
         {
-            _id: '1',
+            
             name: 'Relief Plates and Drink  |  Spread The Love From Your Table',
             category: 'Donation',
             organiser: 'We Aid Co.',
@@ -17,7 +38,7 @@ const data ={
             
         },
         {
-            _id: '2',
+            
             name: 'The Kuku Biz  |  Poultry farming with Technology',
             category: 'Reward',
             organiser: 'Poultry Innovatives',
@@ -32,12 +53,12 @@ const data ={
             followers: '3k',
         },
         {
-            _id: '3',
+            
             name: 'Facial recognition Software  |  Security feature for Businesses',
             category: 'Investment',
             organiser: 'Stark Tech',
             image: '/assets/img3.jpg',
-            goal: '100k',
+            goal: '100,000',
             raised: '35,000',
             description:'A smart way for securing business premises. Modern solutions for the 21st Century. Embedded intruded detection system with AI.', 
             date: '12 Aug 2021',
